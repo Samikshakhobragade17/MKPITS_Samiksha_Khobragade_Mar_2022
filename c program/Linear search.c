@@ -1,27 +1,34 @@
 #include<stdio.h>
+#include<conio.h>
+
 int main()
 {
-	int a[5],i,ser,f=0;
-	for(i=0;i<5;i++)
+	int a[7],i,s,len,f=-1;
+	printf("Enter array length: ");
+	scanf("%d",&len);
+	printf("Enter 5 numbers\n");
+	for(i=0;i<len;i++)
 	{
-		scanf("%d",&a[i]);
+		scanf("%d",&a[i]);	
 	}
-	printf("enter number you want to search");
-	scanf("%d",&ser);
-	for(i=0;i<5;i++)
+	printf("Enter the number you want to search: ");
+	scanf("%d",&s);
+	for(i=0;i<len;i++)
 	{
-		if(a[i]==ser)
+		if(a[i]==s)
 		{
-			f=1;
+		f=i;
 		}
-		
+
 	}
-	if(f==1)
+	if(f>-1)
 	{
-		printf("present");
+		printf("Present at index %d ",f);
 	}
 	else
 	{
-		printf("not present");
+		printf("Not present");
 	}
 }
+
+
